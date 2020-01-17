@@ -1,0 +1,28 @@
+{
+  "name": "gql-elasticsearch",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node ./bin/www",
+    "dev": "SET NODE_ENV=development& nodemon --exec babel-node ./bin/www",
+    "build": "mkdir deploy & babel index.js -s -d deploy",
+    "clean": "rd /s /q deploy",
+    "rebuild": "npm run clean & npm run build"
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "elasticsearch": "^16.5.0",
+    "express": "~4.16.1",
+    "express-graphql": "^0.9.0",
+    "fs": "0.0.1-security",
+    "graphql": "^14.5.8",
+    "graphql-compose": "^7.8.0",
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -533,7 +533,7 @@ export const productListMock = () => {
         stockText: 'Auf Lager. Lieferzeit 1-3 Werktage',
         isNew: '',
         land: 'Südafrika',
-        region: 'Worcester',
+        region: '',
         art: 'Neue Welt Sekt',
         stars: '',
         tastes: 'brut,leicht & frisch,',

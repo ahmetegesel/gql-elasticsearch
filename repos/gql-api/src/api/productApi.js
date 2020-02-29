@@ -1,12 +1,13 @@
-import { products } from '../schema/_mockData';
+import { products } from "../schema/_mockData";
+import { productsLoader, suggestionsLoader } from '../dataLoaders/product';
 
 export default class ProductApi {
   findById(id) {
-    return products.find(product => product.id === id);
+    return productsLoader.load(id);
   }
 
-  findBy(predicate) {
-    return products.filter(predicate);
+  findSuggestions(categoryId) {
+    return suggestionsLoader.load(categoryId);
   }
 
   findAll() {

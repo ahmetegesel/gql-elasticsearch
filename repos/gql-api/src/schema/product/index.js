@@ -7,13 +7,13 @@ const resolvers = {
     product(parent, { id }, { apis }) {
       return apis.product.findById(id);
     },
-    products(parent, args, { apis }) {
+    products(parent, args, { apis }, info) {
       return apis.product.findAll();
     }
   },
   Product: {
     suggestions(parent, args, { apis }) {
-      return apis.product.findBy(product => product.category.id === parent.category.id && product.id !== parent.id)
+      return apis.product.findSuggestions(parent.category.id)
     }
   }
 };

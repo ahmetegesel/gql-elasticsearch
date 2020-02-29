@@ -5,6 +5,10 @@ export default class ProductApi {
     return products.find(product => product.id === id);
   }
 
+  findBy(predicate) {
+    return products.filter(predicate);
+  }
+
   findAll() {
     return products;
   }

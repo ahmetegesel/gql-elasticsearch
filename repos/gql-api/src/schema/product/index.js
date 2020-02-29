@@ -10,6 +10,11 @@ const resolvers = {
     products(parent, args, { apis }) {
       return apis.product.findAll();
     }
+  },
+  Product: {
+    suggestions(parent, args, { apis }) {
+      return apis.product.findBy(product => product.category.id === parent.category.id && product.id !== parent.id)
+    }
   }
 };
 

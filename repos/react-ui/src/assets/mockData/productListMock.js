@@ -631,7 +631,6 @@ export const productListMock = () => {
         land: 'Italien',
         region: 'Apulien',
         art: '',
-        stars: '',
         tastes: 'trocken,üppig & opulent,',
         isAb: '',
       },

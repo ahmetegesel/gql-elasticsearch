@@ -535,8 +535,6 @@ export const productListMock = () => {
         land: 'Südafrika',
         region: '',
         art: 'Neue Welt Sekt',
-        stars: '',
-        tastes: 'brut,leicht & frisch,',
       },
       language: 'DE',
       currency: ''

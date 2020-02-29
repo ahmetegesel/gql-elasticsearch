@@ -630,8 +630,6 @@ export const productListMock = () => {
         isNew: '',
         land: 'Italien',
         region: 'Apulien',
-        art: '',
-        tastes: 'trocken,üppig & opulent,',
         isAb: '',
       },
       language: 'DE',

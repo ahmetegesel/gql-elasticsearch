@@ -6,7 +6,7 @@ import 'antd/dist/antd.css';
 import { Layout } from 'antd';
 
 const {
-  Header, Content, Footer, Sider
+  Header, Content, Footer, Sider,
 } = Layout;
 
 class DefaultLayout extends Component {
@@ -27,7 +27,7 @@ class DefaultLayout extends Component {
 
   render() {
     const {
-      children
+      children,
     } = this.props;
     const {
       hasError,
@@ -45,7 +45,7 @@ class DefaultLayout extends Component {
             collapsedWidth="0"
           >
             <div className="logo" />
-          logo
+            logo
           </Sider>
           <Layout>
             <Header style={{ background: '#fff', textAlign: 'center' }}>

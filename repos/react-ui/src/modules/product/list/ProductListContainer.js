@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class ProductListContainer extends React.Component {
-
+class ProductListContainer extends React.PureComponent {
   render() {
-     return (
+    return (
       <>
         ProductListContainer
       </>
@@ -16,7 +15,7 @@ ProductListContainer.propTypes = {
 };
 
 const mapStateToProps = () => ({
- // props here..
+  // props here..
 });
 
 const actions = {

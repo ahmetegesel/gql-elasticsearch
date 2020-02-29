@@ -15,7 +15,8 @@ const createRootReducer = (history) => combineReducers({
 const composeEnhancers = composeWithDevTools({ trace: true });
 
 const store = createStore(
-  createRootReducer(appHistory), {}, composeEnhancers(applyMiddleware(routerMiddleware(appHistory), thunk)),
+  createRootReducer(appHistory), {},
+  composeEnhancers(applyMiddleware(routerMiddleware(appHistory), thunk)),
 );
 
 export default store;

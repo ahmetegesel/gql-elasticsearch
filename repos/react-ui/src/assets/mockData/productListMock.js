@@ -226,7 +226,6 @@ export const productListMock = () => {
         stars: '',
         tastes: '',
         isAb: '',
-        rebsorte: 'Pinotage'
       },
       language: 'DE',
       currency: ''

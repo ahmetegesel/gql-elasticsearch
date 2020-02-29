@@ -1,4 +1,6 @@
-import { products } from "../schema/_mockData";
+/* eslint-disable class-methods-use-this */ // TODO After complete implementation, delete this
+
+import { products } from '../schema/_mockData';
 
 export default class ProductApi {
   product(id) {

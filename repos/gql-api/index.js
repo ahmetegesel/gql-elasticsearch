@@ -1,6 +1,6 @@
-import { ApolloServer } from "apollo-server";
-import { schema } from "./schema/";
-import ProductApi from "./api/productApi";
+import { ApolloServer } from 'apollo-server';
+import schema from './src/schema';
+import ProductApi from './src/api/productApi';
 
 const { typeDefs, resolvers } = schema;
 
@@ -8,7 +8,7 @@ const context = {
   apis: {
     product: new ProductApi()
   }
-}
+};
 
 // Set up Apollo Server
 const server = new ApolloServer({
@@ -20,5 +20,5 @@ const server = new ApolloServer({
 });
 
 server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+  console.log(`🚀  Server ready at ${url}`); // eslint-disable-line
 });

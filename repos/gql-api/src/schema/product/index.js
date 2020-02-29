@@ -1,5 +1,5 @@
 import types from './types.graphql';
-import { products } from "../_mockData";
+import { products } from '../_mockData';
 
 const resolvers = {
   Query: {
@@ -10,9 +10,6 @@ const resolvers = {
       return products;
     }
   }
-}
+};
 
-export {
-  types,
-  resolvers
-}
+export { types, resolvers };

@@ -1,4 +1,4 @@
-export const  products = [
+export const products = [
   {
     id: 'test-product-1',
     name: 'Test Product 1'
@@ -14,7 +14,7 @@ export const  products = [
   {
     id: 'test-product-4',
     name: 'Test Product 4'
-  },
+  }
 ];
 
 export const categories = [
@@ -25,5 +25,5 @@ export const categories = [
   {
     id: 'test-category-2',
     name: 'Test Category 2'
-  },
-]
+  }
+];

@@ -1,5 +1,3 @@
-
-
 export const products = [
   {
     "id": "5e5ab4070c40bf74df32bc31",
@@ -21,8 +19,8 @@ export const products = [
     "id": "5e5ab407bed5c14177c1356e",
     "name": "Quotam",
     "brand": {
-      "id": "5e5ab40793a461465558ae47",
-      "name": "Phuel"
+      "id": "5e5ab407fc80522d06b6d8f9",
+      "name": "Entroflex"
     },
     "createdDate": "23/08/1972",
     "updatedDate": "27/08/1975",
@@ -37,8 +35,8 @@ export const products = [
     "id": "5e5ab407c7c9552c8484b589",
     "name": "Physhold",
     "brand": {
-      "id": "5e5ab407bc17d21525dc6485",
-      "name": "Metroz"
+      "id": "5e5ab40793a461465558ae47",
+      "name": "Phuel"
     },
     "createdDate": "01/11/1999",
     "updatedDate": "26/04/2000",
@@ -53,8 +51,8 @@ export const products = [
     "id": "5e5ab407d6d2f3de8b3d1c0c",
     "name": "Kondanplus",
     "brand": {
-      "id": "5e5ab4078adaa6077dc07b78",
-      "name": "Blanet"
+      "id": "5e5ab40793a461465558ae47",
+      "name": "Phuel"
     },
     "createdDate": "21/10/1984",
     "updatedDate": "16/03/2019",
@@ -69,8 +67,8 @@ export const products = [
     "id": "5e5ab4077b8e4f3156cc0e4b",
     "name": "Hotfax",
     "brand": {
-      "id": "5e5ab407380d55b11f5f8090",
-      "name": "Gaptec"
+      "id": "5e5ab40793a461465558ae47",
+      "name": "Phuel"
     },
     "createdDate": "09/10/2014",
     "updatedDate": "24/10/2002",
@@ -85,8 +83,8 @@ export const products = [
     "id": "5e5ab4073224c87334be2132",
     "name": "Volt Tex",
     "brand": {
-      "id": "5e5ab4077c5a5595f3624d40",
-      "name": "Bolax"
+      "id": "5e5ab407bc17d21525dc6485",
+      "name": "Metroz"
     },
     "createdDate": "15/11/2018",
     "updatedDate": "13/12/1979",
@@ -101,8 +99,8 @@ export const products = [
     "id": "5e5ab407040ac3d12429755b",
     "name": "Redfind",
     "brand": {
-      "id": "5e5ab407453684aea68d007e",
-      "name": "Bovis"
+      "id": "5e5ab4078adaa6077dc07b78",
+      "name": "Blanet"
     },
     "createdDate": "21/06/2019",
     "updatedDate": "17/03/2014",
@@ -117,8 +115,8 @@ export const products = [
     "id": "5e5ab407c793e17c44c6d78a",
     "name": "Zummalam",
     "brand": {
-      "id": "5e5ab40702a13d1fed50e1b5",
-      "name": "Sequitur"
+      "id": "5e5ab4078adaa6077dc07b78",
+      "name": "Blanet"
     },
     "createdDate": "07/03/1997",
     "updatedDate": "03/06/1977",
@@ -133,8 +131,8 @@ export const products = [
     "id": "5e5ab4070428f823f7701866",
     "name": "Dontip",
     "brand": {
-      "id": "5e5ab407b846435cf2c6cfda",
-      "name": "Geekus"
+      "id": "5e5ab4078adaa6077dc07b78",
+      "name": "Blanet"
     },
     "createdDate": "24/12/1973",
     "updatedDate": "25/12/2007",
@@ -149,8 +147,8 @@ export const products = [
     "id": "5e5ab4070b4c36fccb492236",
     "name": "Reddax",
     "brand": {
-      "id": "5e5ab407054fcffd073d6012",
-      "name": "Waretel"
+      "id": "5e5ab4078adaa6077dc07b78",
+      "name": "Blanet"
     },
     "createdDate": "25/07/1977",
     "updatedDate": "28/05/1991",
@@ -165,8 +163,8 @@ export const products = [
     "id": "5e5ab40735349f6fbd49811b",
     "name": "Kintop",
     "brand": {
-      "id": "5e5ab407fea43da2845d8006",
-      "name": "Isopop"
+      "id": "5e5ab407380d55b11f5f8090",
+      "name": "Gaptec"
     },
     "createdDate": "23/01/2000",
     "updatedDate": "30/03/1976",
@@ -181,8 +179,8 @@ export const products = [
     "id": "5e5ab407a2dca0dd9989bdef",
     "name": "Zonezap",
     "brand": {
-      "id": "5e5ab407cb0a631cf3f3d6fa",
-      "name": "Diginetic"
+      "id": "5e5ab407380d55b11f5f8090",
+      "name": "Gaptec"
     },
     "createdDate": "23/06/1983",
     "updatedDate": "24/01/2008",
@@ -197,8 +195,8 @@ export const products = [
     "id": "5e5ab407385d9855a2c5366c",
     "name": "Caneco",
     "brand": {
-      "id": "5e5ab40770a0b1e138342a40",
-      "name": "Portalis"
+      "id": "5e5ab407380d55b11f5f8090",
+      "name": "Gaptec"
     },
     "createdDate": "21/11/2003",
     "updatedDate": "12/04/1983",
@@ -213,8 +211,8 @@ export const products = [
     "id": "5e5ab407614035b7aefb1ccb",
     "name": "Superlax",
     "brand": {
-      "id": "5e5ab407b0ecc5efcd441afc",
-      "name": "Zenthall"
+      "id": "5e5ab407380d55b11f5f8090",
+      "name": "Gaptec"
     },
     "createdDate": "08/09/1975",
     "updatedDate": "10/05/1986",
@@ -229,8 +227,8 @@ export const products = [
     "id": "5e5ab4070ceb60875a953de0",
     "name": "Zummalam",
     "brand": {
-      "id": "5e5ab407d9afdb41611c641f",
-      "name": "Comstruct"
+      "id": "5e5ab407380d55b11f5f8090",
+      "name": "Gaptec"
     },
     "createdDate": "22/02/1983",
     "updatedDate": "14/01/1978",
@@ -245,8 +243,8 @@ export const products = [
     "id": "5e5ab407407cf20394616040",
     "name": "Zonezap",
     "brand": {
-      "id": "5e5ab407957cb3ac842b6f89",
-      "name": "Ovium"
+      "id": "5e5ab407380d55b11f5f8090",
+      "name": "Gaptec"
     },
     "createdDate": "29/06/1998",
     "updatedDate": "30/10/2003",
@@ -261,8 +259,8 @@ export const products = [
     "id": "5e5ab40790fe063e1c132010",
     "name": "Quotam",
     "brand": {
-      "id": "5e5ab4078b0ac014f11e52b1",
-      "name": "Liquidoc"
+      "id": "5e5ab4077c5a5595f3624d40",
+      "name": "Bolax"
     },
     "createdDate": "22/12/1976",
     "updatedDate": "18/10/1979",
@@ -277,8 +275,8 @@ export const products = [
     "id": "5e5ab40774b3d74fcaa6edf2",
     "name": "Zummalam",
     "brand": {
-      "id": "5e5ab407f4534788e7bce53e",
-      "name": "Cinesanct"
+      "id": "5e5ab4077c5a5595f3624d40",
+      "name": "Bolax"
     },
     "createdDate": "23/04/1988",
     "updatedDate": "03/07/2000",
@@ -293,8 +291,8 @@ export const products = [
     "id": "5e5ab407c6b19c134cbb0377",
     "name": "Physhold",
     "brand": {
-      "id": "5e5ab40710185c56237a3d3b",
-      "name": "Centice"
+      "id": "5e5ab4077c5a5595f3624d40",
+      "name": "Bolax"
     },
     "createdDate": "12/03/1977",
     "updatedDate": "07/03/2016",
@@ -309,8 +307,8 @@ export const products = [
     "id": "5e5ab4077ec9c9365cbdf685",
     "name": "Viafan",
     "brand": {
-      "id": "5e5ab407c72df0d54a4dcd9f",
-      "name": "Danja"
+      "id": "5e5ab4077c5a5595f3624d40",
+      "name": "Bolax"
     },
     "createdDate": "01/12/1998",
     "updatedDate": "29/11/1970",
@@ -325,8 +323,8 @@ export const products = [
     "id": "5e5ab407b11cf99d2e9f38ad",
     "name": "Strong Aptax",
     "brand": {
-      "id": "5e5ab407de3e1f6e7e86abc7",
-      "name": "Uniworld"
+      "id": "5e5ab4077c5a5595f3624d40",
+      "name": "Bolax"
     },
     "createdDate": "24/10/2005",
     "updatedDate": "08/12/2016",
@@ -341,8 +339,8 @@ export const products = [
     "id": "5e5ab4079cd21cd40465591f",
     "name": "Superlax",
     "brand": {
-      "id": "5e5ab407d2c692c6ad3f7aff",
-      "name": "Isodrive"
+      "id": "5e5ab407453684aea68d007e",
+      "name": "Bovis"
     },
     "createdDate": "01/10/2019",
     "updatedDate": "19/02/1993",
@@ -357,8 +355,8 @@ export const products = [
     "id": "5e5ab4078dd1fbf1f6a7d4bf",
     "name": "Physhold",
     "brand": {
-      "id": "5e5ab4079ee7488efec0dcd3",
-      "name": "Exoblue"
+      "id": "5e5ab407453684aea68d007e",
+      "name": "Bovis"
     },
     "createdDate": "28/07/1982",
     "updatedDate": "14/01/1977",
@@ -373,8 +371,8 @@ export const products = [
     "id": "5e5ab4070a1d71adc337f982",
     "name": "Fasehome",
     "brand": {
-      "id": "5e5ab40719f6b9675cefe6fc",
-      "name": "Aquamate"
+      "id": "5e5ab407453684aea68d007e",
+      "name": "Bovis"
     },
     "createdDate": "28/05/2018",
     "updatedDate": "26/12/2010",
@@ -389,8 +387,8 @@ export const products = [
     "id": "5e5ab40736737ce200c6075d",
     "name": "Plus Domfan",
     "brand": {
-      "id": "5e5ab407f48d823f85e601bc",
-      "name": "Datagene"
+      "id": "5e5ab407453684aea68d007e",
+      "name": "Bovis"
     },
     "createdDate": "25/03/2007",
     "updatedDate": "11/03/2012",
@@ -400,86 +398,6 @@ export const products = [
       "name": "Shoe"
     },
     "description": "Aliqua velit qui qui consequat. Excepteur ipsum mollit nisi sit sunt culpa ea et. Nulla ipsum esse culpa amet est pariatur anim enim ullamco incididunt excepteur minim consectetur. Nostrud sit sunt in ex cillum quis ipsum dolor irure sunt irure. Enim voluptate in nulla incididunt laborum sunt eiusmod nisi mollit. Irure pariatur amet aliqua ullamco minim irure esse incididunt. Pariatur sunt nostrud id excepteur Lorem."
-  },
-  {
-    "id": "5e5ab40773d85837d904eea3",
-    "name": "Physhold",
-    "brand": {
-      "id": "5e5ab407d23e0101678e16e9",
-      "name": "Turnabout"
-    },
-    "createdDate": "19/06/2003",
-    "updatedDate": "21/10/1977",
-    "inStock": false,
-    "category": {
-      "id": "5e5ab25302436a96746ca429",
-      "name": "Purse"
-    },
-    "description": "Adipisicing in et incididunt aute dolore do irure quis cillum Lorem consequat amet. Commodo veniam ullamco exercitation irure ea. Lorem irure elit magna nostrud reprehenderit exercitation enim dolore dolor dolor. Elit velit Lorem sunt aute duis cillum non magna Lorem exercitation ullamco deserunt. Veniam nisi Lorem consectetur eu sit irure voluptate laborum elit dolor voluptate ex consectetur."
-  },
-  {
-    "id": "5e5ab407aa5b70e57982eb1d",
-    "name": "Kondanplus",
-    "brand": {
-      "id": "5e5ab407d5827dd7719b6804",
-      "name": "Digifad"
-    },
-    "createdDate": "06/03/2017",
-    "updatedDate": "20/11/2004",
-    "inStock": true,
-    "category": {
-      "id": "5e5ab25302436a96746ca429",
-      "name": "Purse"
-    },
-    "description": "Ullamco elit laborum magna id veniam. Consequat commodo eiusmod dolor laborum. Nostrud incididunt ullamco veniam velit eiusmod fugiat tempor in id mollit voluptate minim elit."
-  },
-  {
-    "id": "5e5ab407f2560056ab024593",
-    "name": "Dongflex",
-    "brand": {
-      "id": "5e5ab407078d0daa9f534e8f",
-      "name": "Comdom"
-    },
-    "createdDate": "01/11/1989",
-    "updatedDate": "21/08/1991",
-    "inStock": true,
-    "category": {
-      "id": "5e5ab26060e148e76fc8f456",
-      "name": "Accessories"
-    },
-    "description": "Fugiat officia eiusmod est anim voluptate exercitation sit sunt magna. Veniam reprehenderit id elit magna id eu nulla laborum cillum aliquip cillum exercitation fugiat. Eu anim nulla amet incididunt in est cillum. Dolore consequat sit incididunt sit eu laborum duis duis nulla et. Aliqua et sint anim et proident excepteur in minim veniam officia. Est Lorem sint commodo anim aute labore."
-  },
-  {
-    "id": "5e5ab4070e708028e48b1aa8",
-    "name": "Tamtech",
-    "brand": {
-      "id": "5e5ab4072bd1ede689bbfacc",
-      "name": "Biolive"
-    },
-    "createdDate": "29/01/1987",
-    "updatedDate": "20/08/1981",
-    "inStock": false,
-    "category": {
-      "id": "5e5ab25302436a96746ca429",
-      "name": "Purse"
-    },
-    "description": "Incididunt Lorem officia exercitation magna elit enim laborum incididunt nostrud nostrud aliquip. Dolor pariatur aliquip proident enim ex cupidatat sint officia officia id dolore ex sint laborum. Pariatur ea aute pariatur aute ullamco aliquip. Proident duis do dolore anim aliqua. Aliqua in ex officia ex aliqua non culpa ex duis labore labore eu sit nostrud."
-  },
-  {
-    "id": "5e5ab40714f1f7f857488291",
-    "name": "Physhold",
-    "brand": {
-      "id": "5e5ab407c5873d28698c6e05",
-      "name": "Comfirm"
-    },
-    "createdDate": "20/07/1991",
-    "updatedDate": "30/10/2010",
-    "inStock": false,
-    "category": {
-      "id": "5e5ab25a1da49abb0dd021dd",
-      "name": "Shirt"
-    },
-    "description": "Officia incididunt minim elit dolor cupidatat laborum dolor ipsum elit ex anim sit aliqua in. Dolor id occaecat proident ut magna consectetur officia nisi laboris fugiat veniam tempor. Quis duis qui enim ad. Enim cupidatat exercitation voluptate duis voluptate et aliqua est aliqua sunt proident."
   }
 ];
 
@@ -499,5 +417,36 @@ export const categories = [
   {
     id: '5e5ab26060e148e76fc8f456',
     name: 'Accessories'
+  }
+];
+
+export const brands = [
+  {
+    "id": "5e5ab407fc80522d06b6d8f9",
+    "name": "Entroflex"
+  },
+  {
+    "id": "5e5ab40793a461465558ae47",
+    "name": "Phuel"
+  },
+  {
+    "id": "5e5ab407bc17d21525dc6485",
+    "name": "Metroz"
+  },
+  {
+    "id": "5e5ab4078adaa6077dc07b78",
+    "name": "Blanet"
+  },
+  {
+    "id": "5e5ab407380d55b11f5f8090",
+    "name": "Gaptec"
+  },
+  {
+    "id": "5e5ab4077c5a5595f3624d40",
+    "name": "Bolax"
+  },
+  {
+    "id": "5e5ab407453684aea68d007e",
+    "name": "Bovis"
   }
 ];

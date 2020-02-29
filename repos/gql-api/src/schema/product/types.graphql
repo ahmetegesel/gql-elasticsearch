@@ -1,6 +1,12 @@
 type Product {
     id: String!
     name: String!
+    brand: Brand
+    createdDate: String!
+    updatedDate: String
+    inStock: Boolean!
+    category: Category
+    descrtiption :String
 }
 
 extend type Query {

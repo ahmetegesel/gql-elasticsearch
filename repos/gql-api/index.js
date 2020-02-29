@@ -1,16 +1,9 @@
 import { ApolloServer } from 'apollo-server';
 import schema from './src/schema';
-import ProductApi from './src/api/productApi';
+import context from './src/context';
 
 const { typeDefs, resolvers } = schema;
 
-const context = {
-  apis: {
-    product: new ProductApi()
-  }
-};
-
-// Set up Apollo Server
 const server = new ApolloServer({
   typeDefs,
   resolvers,

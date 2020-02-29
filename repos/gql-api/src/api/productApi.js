@@ -1,11 +1,11 @@
 import { products } from '../schema/_mockData';
 
 export default class ProductApi {
-  product(id) {
+  findById(id) {
     return products.find(product => product.id === id);
   }
 
-  products() {
+  findAll() {
     return products;
   }
 }

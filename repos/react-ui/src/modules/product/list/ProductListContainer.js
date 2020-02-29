@@ -1,34 +1,37 @@
-import { Button } from 'antd';
-import { setProductListAction } from 'modules/product/store/actions';
+import { ProductListTable } from 'modules/product/list/productListTable/ProductListTable';
+import { getProductListAction, setProductListAction } from 'modules/product/store/actions';
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class ProductListContainer extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-  }
-
-  componentDidMount() {}
-
-  onClick() {
-    const { setProductList, productList } = this.props;
-    setProductList([...productList, { name: 'ali' }]);
+  componentDidMount() {
+    const { getProductList } = this.props;
+    getProductList().then(() => {
+      console.info('call is done');
+    });
   }
 
   render() {
     const { productList } = this.props;
-    console.log(productList);
     return (
       <>
-        <Button onClick={this.onClick}>click me</Button>
+        <ProductListTable
+          productList={productList.map(product => ({
+            key: product.id,
+            id: product.id,
+            brand: product.brand.name,
+            name: product.name,
+            inStock: product.inStock,
+            price: product.price
+          }))}
+        />
       </>
     );
   }
 }
 ProductListContainer.propTypes = {
-  setProductList: PropTypes.func.isRequired,
+  getProductList: PropTypes.func.isRequired,
   productList: PropTypes.array.isRequired
 };
 
@@ -37,6 +40,7 @@ const mapStateToProps = state => ({
 });
 
 const actions = {
+  getProductList: getProductListAction,
   setProductList: setProductListAction
 };
 export default connect(mapStateToProps, actions)(ProductListContainer);

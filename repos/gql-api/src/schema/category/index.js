@@ -1,15 +1,19 @@
-import types from './types.graphql';
 import { categories } from '../_mockData';
+
+import types from './types.graphql';
 
 const resolvers = {
   Query: {
-    category(parent, { id }) {
-      return categories.find(category => category.id === id);
+    category(parent, { id }, { apis }) {
+      return apis.category.findById(id);
     },
-    categories() {
-      return categories;
+    categories(parent, args, { apis }) {
+      return apis.category.findAll();
     }
   }
 };
 
-export { types, resolvers };
+export {
+  types,
+  resolvers
+}

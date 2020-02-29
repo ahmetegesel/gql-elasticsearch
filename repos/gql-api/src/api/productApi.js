@@ -1,13 +1,15 @@
-/* eslint-disable class-methods-use-this */ // TODO After complete implementation, delete this
-
 import { products } from '../schema/_mockData';
 
 export default class ProductApi {
-  product(id) {
+  findById(id) {
     return products.find(product => product.id === id);
   }
 
-  products() {
+  findBy(predicate) {
+    return products.filter(predicate);
+  }
+
+  findAll() {
     return products;
   }
 }

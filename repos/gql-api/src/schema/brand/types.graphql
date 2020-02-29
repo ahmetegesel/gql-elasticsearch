@@ -1,0 +1,9 @@
+type Brand {
+    id: String!
+    name: String!
+}
+
+extend type Query {
+    brand(id: String!):Brand
+    brands:[Brand]
+}

@@ -1,2 +1,2 @@
-export { dispatchAction } from './dispatchAction'
-export { getAction } from './getAction'
+export { dispatchAction } from './dispatchAction';
+export { getAction } from './getAction';

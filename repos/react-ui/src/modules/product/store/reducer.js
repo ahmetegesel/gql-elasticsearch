@@ -5,7 +5,7 @@ import {
 const defaultState = {
   productList: [],
   categoryList: [],
-  selectedCategory: ''
+  selectedCategory: '',
 };
 
 export const reducer = (state = defaultState, action) => {
@@ -17,7 +17,7 @@ export const reducer = (state = defaultState, action) => {
       };
     default:
       return {
-        ...state
+        ...state,
       };
   }
 };

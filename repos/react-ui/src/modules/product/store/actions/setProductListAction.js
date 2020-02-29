@@ -1,6 +1,6 @@
 // @flow
-import { dispatchAction } from 'ReduxStore/utils/getAction';
-import { SET_PRODUCT_LIST } from 'ReduxStore/product/actionTypes';
+import { dispatchAction } from 'lib/actionUtils';
+import { SET_PRODUCT_LIST } from 'modules/product/store/actionTypes';
 
 /**
  * @summary Dispatches product list to reducer

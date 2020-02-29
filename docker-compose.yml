@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gql-api:
+    build:
+      context: ./repos/gql-api
+      dockerfile: Dockerfile
+    image: gql-api:latest
+    container_name: gql-api
+    ports:
+      - "4000:4000"
+    command: npm run start

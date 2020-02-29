@@ -1,8 +1,9 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 import { ProductListTable } from 'modules/product/list/productListTable/ProductListTable';
 import { getProductListAction, setProductListAction } from 'modules/product/store/actions';
-import React from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 class ProductListContainer extends React.PureComponent {
   componentDidMount() {
@@ -14,6 +15,11 @@ class ProductListContainer extends React.PureComponent {
 
   render() {
     const { productList } = this.props;
+    // Component will be rendered multiple times
+    // so, will be better to return empty when there is no product in the list.
+    if (!productList.length) {
+      return <></>;
+    }
     return (
       <>
         <ProductListTable

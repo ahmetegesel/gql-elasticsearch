@@ -1,10 +1,13 @@
-import { Button } from 'antd';
 import React from 'react';
+import { Button, notification } from 'antd';
 import { SmileTwoTone, FrownTwoTone, SearchOutlined } from '@ant-design/icons';
 
 export const getTableColumnDefs = () => {
   const onDetailClick = param => {
     console.log(param);
+    notification.info({
+      message: `${param.name} is selected`
+    });
   };
   return [
     { title: 'Brand', dataIndex: 'brand' },

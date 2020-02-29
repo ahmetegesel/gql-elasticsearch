@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import { Layout } from 'antd';
+import { Layout, Menu, Input } from 'antd';
+import { UserOutlined, VideoCameraOutlined, UploadOutlined } from '@ant-design/icons';
 
+const { Search } = Input;
 const { Header, Content, Footer, Sider } = Layout;
 
 class DefaultLayout extends Component {
@@ -35,10 +37,35 @@ class DefaultLayout extends Component {
         <Layout>
           <Sider id="components-layout-demo-responsive" breakpoint="lg" collapsedWidth="0">
             <div className="logo" />
-            logo
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+              <Menu.Item key="1">
+                <UserOutlined />
+                <span className="nav-text">nav 1</span>
+              </Menu.Item>
+              <Menu.Item key="2">
+                <VideoCameraOutlined />
+                <span className="nav-text">nav 2</span>
+              </Menu.Item>
+              <Menu.Item key="3">
+                <UploadOutlined />
+                <span className="nav-text">nav 3</span>
+              </Menu.Item>
+              <Menu.Item key="4">
+                <UserOutlined />
+                <span className="nav-text">nav 4</span>
+              </Menu.Item>
+            </Menu>
           </Sider>
           <Layout>
-            <Header style={{ background: '#fff', textAlign: 'center' }}>search box</Header>
+            <Header style={{ background: '#fff', textAlign: 'center' }}>
+              <div style={{ padding: '16px' }}>
+                <Search
+                  placeholder="input search text"
+                  onSearch={value => console.log(value)}
+                  enterButton
+                />
+              </div>
+            </Header>
             <Content style={{ margin: '24px 16px 0' }}>
               <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>{children}</div>
             </Content>

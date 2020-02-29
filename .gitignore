@@ -104,3 +104,11 @@ dist
 
 # IDE
 .idea
+
+# gql-api
+repos/gql-api/node_modules
+repos/gql-api/package-lock.json
+
+# react-ui
+repos/react-ui/node_modules
+repos/react-ui/package-lock.json

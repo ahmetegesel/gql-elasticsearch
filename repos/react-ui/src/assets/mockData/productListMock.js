@@ -634,7 +634,6 @@ export const productListMock = () => {
         stars: '<meta itemprop="ratingValue" content="9">\n<meta itemprop="worstRating" content="1">\n<meta itemprop="bestRating" content="10">\n<meta itemprop="ratingCount" content="12">\n<i class="icon--star"></i>\n<i class="icon--star"></i>\n<i class="icon--star"></i>\n<i class="icon--star"></i>\n<i class="icon--star-half"></i>\n<span class="rating--count-wrapper">\n(<span class="rating--count">12</span>)\n</span>',
         tastes: 'trocken,üppig & opulent,',
         isAb: '',
-        rebsorte: 'Zinfandel / Primitivo'
       },
       language: 'DE',
       currency: ''

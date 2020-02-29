@@ -537,7 +537,7 @@ export const productListMock = () => {
         art: 'Neue Welt Sekt',
         stars: '',
         tastes: 'brut,leicht & frisch,',
-        isAb: 'true',
+        isAb: '',
         rebsorte: ''
       },
       language: 'DE',

@@ -5,9 +5,7 @@ import { withRouter } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { Layout } from 'antd';
 
-const {
-  Header, Content, Footer, Sider,
-} = Layout;
+const { Header, Content, Footer, Sider } = Layout;
 
 class DefaultLayout extends Component {
   constructor(props) {
@@ -26,12 +24,8 @@ class DefaultLayout extends Component {
   }
 
   render() {
-    const {
-      children,
-    } = this.props;
-    const {
-      hasError,
-    } = this.state;
+    const { children } = this.props;
+    const { hasError } = this.state;
     if (hasError) {
       // I can render any custom fallback UI
       return <h1>Something is wrong, I can feel it.</h1>;
@@ -39,22 +33,14 @@ class DefaultLayout extends Component {
     return (
       <>
         <Layout>
-          <Sider
-            id="components-layout-demo-responsive"
-            breakpoint="lg"
-            collapsedWidth="0"
-          >
+          <Sider id="components-layout-demo-responsive" breakpoint="lg" collapsedWidth="0">
             <div className="logo" />
             logo
           </Sider>
           <Layout>
-            <Header style={{ background: '#fff', textAlign: 'center' }}>
-              search box
-            </Header>
+            <Header style={{ background: '#fff', textAlign: 'center' }}>search box</Header>
             <Content style={{ margin: '24px 16px 0' }}>
-              <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-                {children}
-              </div>
+              <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>{children}</div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>GQL Elasticsearch</Footer>
           </Layout>
@@ -71,13 +57,9 @@ const mapStateToProps = () => {
 };
 
 DefaultLayout.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.object.isRequired
 };
 
-const actions = {
-};
+const actions = {};
 
-export default withRouter(connect(
-  mapStateToProps,
-  actions,
-)(DefaultLayout));
+export default withRouter(connect(mapStateToProps, actions)(DefaultLayout));

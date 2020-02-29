@@ -1,12 +1,15 @@
-{
-  "extends": [
+module.exports = {
+  extends: [
     "airbnb",
-    "plugin:flowtype/recommended"
+    "plugin:flowtype/recommended",
+    "prettier"
   ],
-  "plugins": [
-    "flowtype"
+  plugins: [
+    "flowtype",
+    "prettier"
   ],
-  "rules": {
+  rules: {
+    "prettier/prettier": ["error"],
     "import/prefer-default-export": [0,{}],
     "arrow-body-style": [0],
     "react/jsx-filename-extension": [1,{"extensions": [".js",".jsx"]}],
@@ -63,4 +66,4 @@
     "browser": true,
     "node": true
   }
-}
+};

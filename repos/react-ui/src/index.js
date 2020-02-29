@@ -23,5 +23,5 @@ ReactDom.render(
       </DefaultLayout>
     </ConnectedRouter>
   </Provider>,
-  document.getElementById('app'),
+  document.getElementById('app')
 );

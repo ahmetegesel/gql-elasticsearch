@@ -8,7 +8,7 @@ import { SET_PRODUCT_LIST } from 'modules/product/store/actionTypes';
  * @return dispatched product list
  * * */
 export const setProductListAction = (productList: []) => {
-  return async (dispatch) => {
+  return async dispatch => {
     return dispatchAction(dispatch)(SET_PRODUCT_LIST, productList);
   };
 };

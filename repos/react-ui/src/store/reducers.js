@@ -1,7 +1,7 @@
 import { reducer as productReducer } from 'modules/product/store';
 
 const reducers = {
-  product: productReducer,
+  product: productReducer
 };
 
 export { reducers };

@@ -1,5 +1,5 @@
-import {getAction} from "./getAction";
+// @flow
+import { getAction } from './getAction';
 
-export const dispatchAction = (dispatch) => (actionType: String, payload: Object, meta: Object) => dispatch(
-    getAction(actionType, payload, meta)
-);
+export const dispatchAction = dispatch => (actionType: String, payload: Object) =>
+  dispatch(getAction(actionType, payload));

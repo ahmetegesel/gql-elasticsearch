@@ -1,25 +1,10 @@
-import {
-  SET_PRODUCT_LIST,
-} from './actionTypes';
+import { generateUpdateStateHandler, generateReducer } from 'lib/reducerUtils';
+import { stateKeys, defaultState } from 'modules/product/store/defaultState';
+import { SET_PRODUCT_LIST, SET_CATEGORY_LIST, SET_SELECTED_CATEGORY } from './actionTypes';
 
-const defaultState = {
-  productList: [],
-  categoryList: [],
-  selectedCategory: '',
-};
+const handlers = {};
+handlers[SET_PRODUCT_LIST] = generateUpdateStateHandler(stateKeys.productList);
+handlers[SET_CATEGORY_LIST] = generateUpdateStateHandler(stateKeys.categoryList);
+handlers[SET_SELECTED_CATEGORY] = generateUpdateStateHandler(stateKeys.selectedCategory);
 
-export const reducer = (state = defaultState, action) => {
-  switch (action.type) {
-    case SET_PRODUCT_LIST:
-      return {
-        ...state,
-        productList: action.payload,
-      };
-    default:
-      return {
-        ...state,
-      };
-  }
-};
-
-export default reducer;
+export default generateReducer(defaultState, handlers);

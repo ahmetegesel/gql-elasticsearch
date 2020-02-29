@@ -1,0 +1,1 @@
+export { setProductListAction } from './setProductListAction';

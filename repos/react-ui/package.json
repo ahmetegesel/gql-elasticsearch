@@ -1,0 +1,14 @@
+{
+  "name": "react-ui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7"
+  },
+  "author": "Ahmet Egesel",
+  "license": "MIT"
+}

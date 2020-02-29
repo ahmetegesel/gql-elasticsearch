@@ -270,7 +270,6 @@ export const productListMock = () => {
         stars: '',
         tastes: '',
         isAb: '',
-        rebsorte: 'Cuvée'
       },
       language: 'DE',
       currency: ''

@@ -11,7 +11,6 @@ export default class ProductApi {
   }
 
   async findSuggestions(category, clients) {
-    console.log(category)
     const resultResultBody = await clients.elastic.search({
       index: 'products_1',
       body: {

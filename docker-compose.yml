@@ -9,12 +9,16 @@ services:
     ports:
       - "4000:4000"
     command: npm run start
-  react-ui:
-    build:
-      context: ./repos/react-ui
-      dockerfile: Dockerfile
-    image: react-ui:latest
-    container_name: react-ui
-    ports:
-      - "4001:4001"
-    command: npm run start
+    environment:
+      ELASTIC_HOST: "https://037f7c2b240f459fb680238303c90281.eu-central-1.aws.cloud.es.io:9243/"
+      ELASTIC_USERNAME: "demo"
+      ELASTIC_PASSWORD: "demouser"
+#  react-ui:
+#    build:
+#      context: ./repos/react-ui
+#      dockerfile: Dockerfile
+#    image: react-ui:latest
+#    container_name: react-ui
+#    ports:
+#      - "4001:4001"
+#    command: npm run start

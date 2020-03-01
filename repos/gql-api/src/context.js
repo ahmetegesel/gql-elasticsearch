@@ -1,6 +1,6 @@
-import ProductApi from "./api/product";
-import CategoryApi from "./api/category";
-import BrandApi from "./api/brand";
+import ProductApi from "./api/ProductApi";
+import CategoryApi from "./api/CategoryApi";
+import BrandApi from "./api/BrandApi";
 
 import createElasticClient from "./lib/createElasticClient";
 

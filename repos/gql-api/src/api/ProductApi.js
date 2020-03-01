@@ -1,4 +1,4 @@
-import { transformSearchResponse, transformGetResponse } from "../utils";
+import { transformSearchResponse, transformGetResponse } from "./utils";
 
 export default class ProductApi {
   async findById(id, clients) {

@@ -1,7 +1,6 @@
+import { transformGetResponse, transformSearchResponse } from "./utils";
 
-import { transformGetResponse, transformSearchResponse } from "../utils";
-
-export default class CategoryApi {
+export default class BrandApi {
   async findById(id, clients) {
     const resultResultBody = await clients.elastic.get({
       index: 'products_1',
@@ -17,7 +16,7 @@ export default class CategoryApi {
       body: {
         query: {
           term: {
-            type: 'category'
+            type: 'brand'
           }
         },
         _source: {

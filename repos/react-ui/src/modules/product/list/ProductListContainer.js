@@ -1,3 +1,4 @@
+import { useQuery } from '@apollo/react-hooks';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -8,6 +9,7 @@ import { getProductListAction, setProductListAction } from 'modules/product/stor
 class ProductListContainer extends React.PureComponent {
   componentDidMount() {
     const { getProductList } = this.props;
+
     getProductList().then(() => {
       console.info('call is done');
     });
@@ -15,6 +17,7 @@ class ProductListContainer extends React.PureComponent {
 
   render() {
     const { productList } = this.props;
+
     // Component will be rendered multiple times
     // so, will be better to return empty when there is no product in the list.
     if (!productList.length) {

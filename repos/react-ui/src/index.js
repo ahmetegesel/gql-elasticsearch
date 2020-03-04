@@ -4,23 +4,26 @@ import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { Redirect, Switch } from 'react-router';
 import { DefaultLayout } from 'layouts';
-import { history } from 'lib';
+import { history, client } from 'lib';
 import store from 'store';
 import { webRouter as productRouter } from 'modules/product';
 
 import 'assets/styles/index.scss';
+import { ApolloProvider } from '@apollo/react-hooks';
 
 const defaultRoute = '/';
 
 ReactDom.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <DefaultLayout>
-        <Switch>
-          {productRouter()}
-          <Redirect from="*" to={defaultRoute} />
-        </Switch>
-      </DefaultLayout>
+      <ApolloProvider client={client}>
+        <DefaultLayout>
+          <Switch>
+            {productRouter()}
+            <Redirect from="*" to={defaultRoute} />
+          </Switch>
+        </DefaultLayout>
+      </ApolloProvider>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('app')

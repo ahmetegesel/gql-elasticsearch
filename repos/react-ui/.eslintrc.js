@@ -11,6 +11,7 @@ module.exports = {
   rules: {
     "prettier/prettier": ["error"],
     "import/prefer-default-export": [0,{}],
+    "import/no-extraneous-dependencies": [0,{}],
     "arrow-body-style": [0],
     "react/jsx-filename-extension": [1,{"extensions": [".js",".jsx"]}],
     "react/prop-types": [2,{}],

@@ -1,13 +1,6 @@
-FROM node:10.16
-
+FROM nginx:1.17.3-alpine
 WORKDIR /usr/www/react-ui
+COPY ./package.json .
+COPY ./ .
 
-COPY package.json .
 
-RUN npm i
-
-COPY . .
-
-EXPOSE 4001
-
-CMD ["npm", "start"]

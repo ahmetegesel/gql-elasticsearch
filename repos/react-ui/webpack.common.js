@@ -22,22 +22,22 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
         use: [
           'style-loader', // creates style nodes from JS strings
           'css-loader', // translates CSS into CommonJS
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
-        ],
+          'sass-loader' // compiles Sass to CSS, using Node Sass by default
+        ]
       }
     ]
   },
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    publicPath: '/',
+    path: path.resolve(__dirname, 'dist')
   },
   plugins: [HTMLWebpackPluginConfig],
   resolve: {
@@ -49,7 +49,7 @@ module.exports = {
       styles: path.resolve(__dirname, './src/styles'),
       layouts: path.resolve(__dirname, './src/layouts'),
       assets: path.resolve(__dirname, './src/assets'),
-      enums: path.resolve(__dirname, './src/enums'),
-    },
-  },
+      enums: path.resolve(__dirname, './src/enums')
+    }
+  }
 };

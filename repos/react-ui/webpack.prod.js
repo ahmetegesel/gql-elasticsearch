@@ -4,8 +4,7 @@ const ConfigCodeBase = require('./webpack.common');
 
 module.exports = WebpackMerge(ConfigCodeBase, {
   mode: 'production',
-  plugins: [
-  ],
+  plugins: [],
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
@@ -16,8 +15,8 @@ module.exports = WebpackMerge(ConfigCodeBase, {
       new TerserPlugin({
         cache: true,
         parallel: true,
-        sourceMap: false, // set to true if you want JS source maps
-      }),
+        sourceMap: false // set to true if you want JS source maps
+      })
     ]
   }
 });

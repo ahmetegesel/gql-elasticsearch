@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   gql-api:
     build:
@@ -16,5 +16,5 @@ services:
     image: react-ui:latest
     container_name: react-ui
     ports:
-      - "4001:4001"
+      - "3000:3000"
     command: npm run start

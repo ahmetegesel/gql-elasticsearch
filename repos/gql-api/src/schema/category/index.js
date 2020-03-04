@@ -1,14 +1,12 @@
-import { categories } from '../_mockData';
-
 import types from './types.graphql';
 
 const resolvers = {
   Query: {
-    category(parent, { id }, { apis }) {
-      return apis.category.findById(id);
+    category(parent, { id }, { apis, clients }) {
+      return apis.category.findById(id, clients);
     },
-    categories(parent, args, { apis }) {
-      return apis.category.findAll();
+    categories(parent, args, { apis, clients }) {
+      return apis.category.findAll(clients);
     }
   }
 };

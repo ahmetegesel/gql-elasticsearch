@@ -1,19 +1,17 @@
-import { products } from '../_mockData';
-
 import types from './types.graphql';
 
 const resolvers = {
   Query: {
-    product(parent, { id }, { apis }) {
-      return apis.product.findById(id);
+    product(parent, { id }, { apis, clients }) {
+      return apis.product.findById(id, clients);
     },
-    products(parent, args, { apis }, info) {
-      return apis.product.findAll();
+    products(parent, args, { apis, clients }) {
+      return apis.product.findAll(clients);
     }
   },
   Product: {
-    suggestions(parent, args, { apis }) {
-      return apis.product.findSuggestions(parent.category.id)
+    suggestions(parent, args, { apis, clients }) {
+      return apis.product.findSuggestions(parent.category.id, clients)
     }
   }
 };

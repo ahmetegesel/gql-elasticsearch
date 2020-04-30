@@ -1,6 +1,8 @@
 {
   "name": "gql-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "This Repo is created to experiment GraphQL on Elasticsearch",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node ./index.js",
     "lint": "eslint ./ -c .eslintrc.js --ext js",
@@ -38,5 +40,13 @@
     "@types/elasticsearch": "^5.0.36"
   },
   "author": "Ahmet Egesel",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "gql",
+    "graphql",
+    "elasticsearch",
+    "es",
+    "nodejs",
+    "functional-programming"
+  ]
 }

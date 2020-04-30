@@ -2,16 +2,13 @@ import types from './types.graphql';
 
 const resolvers = {
   Query: {
-    brand(parent, { id }, { apis, clients }) {
-      return apis.brand.findById(id, clients)
+    brand(parent, { id }, { repositories }) {
+      return repositories.brand.findById(id);
     },
-    brands(parent, args, { apis, clients }) {
-      return apis.brand.findAll(clients)
-    }
-  }
-}
+    brands(parent, args, { repositories }) {
+      return repositories.brand.findAll();
+    },
+  },
+};
 
-export {
-  types,
-  resolvers
-}
+export { types, resolvers };

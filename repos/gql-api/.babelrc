@@ -1,9 +1,0 @@
-{
-  "presets": [
-    "@babel/preset-env"
-  ],
-  "plugins": [
-    "import-graphql",
-    "@babel/plugin-proposal-export-default-from"
-  ]
-}

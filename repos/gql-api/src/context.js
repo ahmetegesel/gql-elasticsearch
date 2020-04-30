@@ -1,31 +1,10 @@
-import ProductApi from "./api/ProductApi";
-import CategoryApi from "./api/CategoryApi";
-import BrandApi from "./api/BrandApi";
+import { freezeAndSeal } from '../lib/object';
+import repositories from './repository';
 
-import createElasticClient from "../lib/createElasticClient";
+export const initializeContext = async (/* options */) => {
+  const context = {
+    repositories,
+  };
 
-const clients = {
-  elastic: createElasticClient({
-    node: process.env.ELASTIC_HOST,
-    auth: {
-      username: process.env.ELASTIC_USERNAME,
-      password: process.env.ELASTIC_PASSWORD
-    }
-  })
+  return freezeAndSeal(context);
 };
-
-const apis = {
-  product: new ProductApi(),
-  category: new CategoryApi(),
-  brand: new BrandApi(),
-}
-
-
-const context = {
-  clients,
-  apis
-};
-
-Object.freeze(context);
-
-export default context;

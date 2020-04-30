@@ -9,8 +9,6 @@ services:
     ports:
       - "4000:4000"
     command: npm run start
-    environment:
-      ELASTIC_HOST: "http://localhost:9200/"
   react-ui:
     build:
       context: ./repos/react-ui

@@ -10,4 +10,11 @@ module.exports = {
     parser: 'babel-eslint',
     sourceType: 'module',
   },
+  globals: {
+    describe: false,
+    test: false,
+    expect: false,
+    jest: false,
+    beforeAll: false,
+  },
 };

@@ -4,7 +4,8 @@
   "scripts": {
     "start": "nodemon --exec babel-node ./index.js",
     "lint": "eslint ./ -c .eslintrc.js --ext js",
-    "prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write \"./**/*.{js,json}\""
+    "prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write \"./**/*.{js,json}\"",
+    "test": "jest"
   },
   "dependencies": {
     "apollo-server": "^2.12.0",

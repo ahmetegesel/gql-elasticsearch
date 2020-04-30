@@ -2,7 +2,7 @@ import ProductApi from "./api/ProductApi";
 import CategoryApi from "./api/CategoryApi";
 import BrandApi from "./api/BrandApi";
 
-import createElasticClient from "./lib/createElasticClient";
+import createElasticClient from "../lib/createElasticClient";
 
 const clients = {
   elastic: createElasticClient({

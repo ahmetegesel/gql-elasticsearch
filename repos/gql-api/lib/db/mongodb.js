@@ -21,14 +21,11 @@ export const createClient = R.curry((url) => {
   });
 });
 
-const then = (promise, fn) => promise.then((result) => fn(result));
-
 const useDbCollection = (dbName, collection) =>
   R.pipe(
     createClient,
-    (clientPromise) =>
-      then(clientPromise, (client) => createDbObject(client, dbName, [collection])),
-    (dbPromise) => then(dbPromise, (db) => db[collection])
+    R.andThen((client) => createDbObject(client, dbName, [collection])),
+    R.andThen((db) => db[collection])
   );
 
 const useLocalDbCollection = (dbName, collection) => useDbCollection(dbName, collection)(localUrl);

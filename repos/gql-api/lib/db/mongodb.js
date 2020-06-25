@@ -1,42 +1,54 @@
 import R from 'ramda';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 
-const localUrl = process.env.MONGO_NODE;
+const localUrl = 'mongodb://root:rootpassword@localhost:27017';
 
-export const createDbObject = R.curry(async (client, dbName, collections) => {
-  const clientInstance = await client;
-  return collections.reduce(
-    (dbObject, collection) => ({
-      ...dbObject,
-      [collection]: clientInstance.db(dbName).collection(collection),
-    }),
-    {}
-  );
+export const createClient = R.memoizeWith(
+  R.identity,
+  R.curry((url) => {
+    console.log('invoked');
+    return MongoClient.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+  })
+);
+
+const useClient = R.curry((url) => createClient(url));
+
+const useDatabase = R.curry((databasseName, client) => client.db(databasseName));
+
+const useCollection = R.curry((collectionName, db) => db.collection(collectionName));
+
+const useProductDatabase = useDatabase('products');
+
+const useLocalProductDatabase = () => {
+  return R.pipe(
+    () => createClient(localUrl),
+    R.andThen((client) => useProductDatabase(client))
+  )();
+};
+
+const findBy = R.curry((predicate, collection) => collection.findOne(predicate));
+
+const findById = (id, collection) => findBy({ _id: id }, collection);
+
+const findByObjectId = (id, collection) => findById(new ObjectId(id), collection);
+
+useLocalProductDatabase().then(async (db) => {
+  const products = useCollection('products', db);
+
+  await R.pipe(
+    findBy,
+    R.andThen((result) => console.log(result))
+  )({ name: 'Product 1' }, products);
 });
 
-export const createClient = R.curry((url) => {
-  return MongoClient.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-});
+useLocalProductDatabase().then(async (db) => {
+  const products = useCollection('products', db);
 
-const useDbCollection = (dbName, collection) =>
-  R.pipe(
-    createClient,
-    R.andThen((client) => createDbObject(client, dbName, [collection])),
-    R.andThen((db) => db[collection])
-  );
-
-const useLocalDbCollection = (dbName, collection) => useDbCollection(dbName, collection)(localUrl);
-
-const useProductDbCollection = (collection) => useDbCollection('products', collection);
-
-const useLocalProductDbCollection = (collection) => useLocalDbCollection('products', collection);
-
-useLocalProductDbCollection('products').then(async (products) => {
-  console.log(await products.findOne({ name: 'Product 1' }));
-});
-useProductDbCollection('products')(localUrl).then(async (products) => {
-  console.log(await products.findOne({ name: 'Product 1' }));
+  await R.pipe(
+    findByObjectId,
+    R.andThen((result) => console.log(result))
+  )('5ef2728266489fa0f8d1f18d', products);
 });

@@ -1,7 +1,7 @@
 import R from 'ramda';
 import { MongoClient, ObjectId } from 'mongodb';
 
-const localUrl = 'mongodb://root:rootpassword@localhost:27017';
+const localUrl = process.env.MONGO_NODE;
 
 export const createClient = R.memoizeWith(
   R.identity,
@@ -14,9 +14,7 @@ export const createClient = R.memoizeWith(
   })
 );
 
-const useClient = R.curry((url) => createClient(url));
-
-const useDatabase = R.curry((databasseName, client) => client.db(databasseName));
+const useDatabase = R.curry((databaseName, client) => client.db(databaseName));
 
 const useCollection = R.curry((collectionName, db) => db.collection(collectionName));
 
@@ -29,20 +27,7 @@ const useLocalProductDatabase = () => {
   )();
 };
 
-const findBy = R.curry((predicate, collection) => collection.findOne(predicate));
-
-const findById = (id, collection) => findBy({ _id: id }, collection);
-
-const findByObjectId = (id, collection) => findById(new ObjectId(id), collection);
-
-useLocalProductDatabase().then(async (db) => {
-  const products = useCollection('products', db);
-
-  await R.pipe(
-    findBy,
-    R.andThen((result) => console.log(result))
-  )({ name: 'Product 1' }, products);
-});
+const findByObjectId = (id, collection) => collection.findOne(new ObjectId(id));
 
 useLocalProductDatabase().then(async (db) => {
   const products = useCollection('products', db);

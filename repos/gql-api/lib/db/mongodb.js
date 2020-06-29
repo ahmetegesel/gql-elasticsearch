@@ -40,29 +40,7 @@ const useProductsCollectionOnLocal = () => useProductsCollection(undefined); // 
 
 const useCollectionOnLocalProducts = useCollection(undefined, 'products');
 
-const useDatabaseOld = R.curry((databaseName, client) => client.db(databaseName));
-
-const useCollectionOld = R.curry((collectionName, db) => db.collection(collectionName));
-
-const useProductDatabase = useDatabaseOld('products');
-
-const useLocalProductDatabase = () => {
-  return R.pipe(
-    () => createClient(),
-    R.andThen((client) => useProductDatabase(client))
-  )();
-};
-
 const findByObjectId = (id, collection) => collection.findOne(new ObjectId(id));
-
-useLocalProductDatabase().then(async (db) => {
-  const products = useCollectionOld('products', db);
-
-  await R.pipe(
-    findByObjectId,
-    R.andThen((result) => console.log(result))
-  )('5ef2728266489fa0f8d1f18d', products);
-});
 
 useProductsCollectionOnLocal().then(async (products) => {
   const result = await findByObjectId('5ef2728266489fa0f8d1f18d', products);

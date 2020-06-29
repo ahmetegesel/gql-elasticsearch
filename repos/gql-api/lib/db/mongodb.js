@@ -18,21 +18,21 @@ export const createClient = R.memoizeWith(R.identity, (options) => {
   return MongoClient.connect(url, R.omit(['url'], finalOptions));
 });
 
-const useDatabase = R.curry((clientOptions, databaseName) =>
+const useDatabaseOn = R.curry((clientOptions, databaseName) =>
   R.pipe(
     () => createClient(clientOptions),
     R.andThen((client) => client.db(databaseName))
   )()
 );
 
+const useDatabase = useDatabaseOn(undefined); // will use default clientOptions, which means local
+
 const useCollection = R.curry((clientOptions, databaseName, collectionName) =>
   R.pipe(
-    () => useDatabase(clientOptions, databaseName),
+    () => useDatabaseOn(clientOptions, databaseName),
     R.andThen((db) => db.collection(collectionName))
   )()
 );
-
-const useLocalDatabase = useDatabase(undefined);
 
 const useProductsCollection = useCollection(R.__, 'products', 'products');
 
@@ -54,7 +54,7 @@ useCollectionOnLocalProducts('products').then(async (products) => {
   console.log(result);
 });
 
-useLocalDatabase('products').then(async (db) => {
+useDatabase('products').then(async (db) => {
   const result = await findByObjectId('5ef2728266489fa0f8d1f18d', db.collection('products'));
 
   console.log(result);
